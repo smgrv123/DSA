@@ -4,6 +4,20 @@ public class StringSearch {
         char target='z';
         boolean res=Search(str,target);
         System.out.println(res);
+        System.out.println(SearchForEach(str, target));
+    }
+
+    static boolean SearchForEach(String str,char target){
+        if(str.length()==0){
+            return false;
+        }
+        // toCharArray convert string to character array
+        for (char ch : str.toCharArray()) {
+            if(ch==target){
+                return true;
+            }            
+        }
+        return false;
     }
 
     static boolean Search(String str,char target){

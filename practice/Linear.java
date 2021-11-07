@@ -29,8 +29,19 @@ public class Linear {
         if(arr.length==0){
             return -1;
         }
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[i]==target){
+        // ! this for loop iterates through the entire array and return index of element
+        // ? here because index is being return edge and corner cases can return -1 as index of the array will never be negative
+        // for (int i = 0; i < arr.length; i++) {
+        //     if(arr[i]==target){
+        //         return i;
+        //     }
+        // }
+
+        // ! this for each loop returns the element of the array
+        // ? here the element can be negative therefore this function is best used will bool as return type
+        // * change this function and code to bool 
+        for (int i : arr) {
+            if(i==target){
                 return i;
             }
         }
