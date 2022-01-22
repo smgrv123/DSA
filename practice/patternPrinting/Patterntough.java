@@ -1,6 +1,6 @@
 public class Patterntough {
     public static void main(String[] args) {
-        pattern18(5);
+        pattern31(5);
     }
 
     static void pattern28(int n) {
@@ -68,5 +68,17 @@ public class Patterntough {
             }
             System.out.println();
         }
+    }
+
+    static void pattern31(int n) {
+        int newn = 2 * n;
+        for (int i = 0; i <= newn; i++) {
+            for (int j = 0; j <= newn; j++) {
+                int index = n - Math.min(Math.min(i, j), Math.min(newn - i, newn - j));
+                System.out.print(index + " ");
+            }
+            System.out.println();
+        }
+
     }
 }
